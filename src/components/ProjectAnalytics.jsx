@@ -114,7 +114,6 @@ const ProjectAnalytics = ({ project, tasks }) => {
                                 dataKey="name"
                                 tick={{ fill: "#52525b", fontSize: 12 }}
                                 axisLine={{ stroke: "#d4d4d8" }}
-                                dark={{ stroke: "#27272a" }}
                             />
                             <YAxis tick={{ fill: "#52525b", fontSize: 12 }} axisLine={{ stroke: "#d4d4d8" }} />
                             <Bar dataKey="value" fill="#3b82f6" radius={[4, 4, 0, 0]} />
