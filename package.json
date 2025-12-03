@@ -1,13 +1,17 @@
 {
-  
+  "name": "project-management",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel-build": "npm ci && npm run build"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",
