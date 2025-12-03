@@ -1,0 +1,43 @@
+﻿
+> lint
+> eslint .
+
+
+D:\Projects\project-management\src\components\AddProjectMember.jsx
+  18:22  error  'setIsAdding' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Projects\project-management\src\components\CreateProjectDialog.jsx
+  21:26  error  'setIsSubmitting' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Projects\project-management\src\components\CreateTaskDialog.jsx
+  11:26  error  'setIsSubmitting' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Projects\project-management\src\components\InviteMemberDialog.jsx
+  8:26  error  'setIsSubmitting' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Projects\project-management\src\components\MyTasksSidebar.jsx
+  41:8  warning  React Hook useEffect has a missing dependency: 'fetchUserTasks'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\Projects\project-management\src\components\ProjectAnalytics.jsx
+  44:56  error  '_' is defined but never used  no-unused-vars
+
+D:\Projects\project-management\src\components\ProjectSettings.jsx
+  19:26  error  'setIsSubmitting' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\Projects\project-management\src\components\RecentActivity.jsx
+  34:8  warning  React Hook useEffect has a missing dependency: 'getTasksFromCurrentWorkspace'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\Projects\project-management\src\components\StatsGrid.jsx
+  83:26  error  'Icon' is defined but never used  no-unused-vars
+
+D:\Projects\project-management\src\pages\Layout.jsx
+  17:8  warning  React Hook useEffect has a missing dependency: 'dispatch'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\Projects\project-management\src\pages\Projects.jsx
+  47:8  warning  React Hook useEffect has a missing dependency: 'filterProjects'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+D:\Projects\project-management\src\pages\TaskDetails.jsx
+  66:46  warning  React Hook useEffect has a missing dependency: 'fetchTaskDetails'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Γ£û 12 problems (7 errors, 5 warnings)
+

@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useSelector } from "react-redux";
 import { Plus, Search, FolderOpen } from "lucide-react";
 import ProjectCard from "../components/ProjectCard";
 import CreateProjectDialog from "../components/CreateProjectDialog";
 
 export default function Projects() {
-    
+
     const projects = useSelector(
         (state) => state?.workspace?.currentWorkspace?.projects || []
     );
@@ -18,7 +18,7 @@ export default function Projects() {
         priority: "ALL",
     });
 
-    const filterProjects = () => {
+    const filterProjects = useCallback(() => {
         let filtered = projects;
 
         if (searchTerm) {
@@ -40,11 +40,11 @@ export default function Projects() {
         }
 
         setFilteredProjects(filtered);
-    };
+    }, [projects, searchTerm, filters]);
 
     useEffect(() => {
         filterProjects();
-    }, [projects, searchTerm, filters]);
+    }, [projects, searchTerm, filters, filterProjects]);
 
     return (
         <div className="space-y-6 max-w-6xl mx-auto">

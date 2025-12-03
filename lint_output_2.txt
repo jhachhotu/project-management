@@ -1,0 +1,22 @@
+﻿
+> lint
+> eslint .
+
+
+D:\Projects\project-management\src\components\MyTasksSidebar.jsx
+  29:11  warning  The 'fetchUserTasks' function makes the dependencies of useEffect Hook (at line 41) change on every render. Move it inside the useEffect callback. Alternatively, wrap the definition of 'fetchUserTasks' in its own useCallback() Hook  react-hooks/exhaustive-deps
+
+D:\Projects\project-management\src\components\RecentActivity.jsx
+  24:11  warning  The 'getTasksFromCurrentWorkspace' function makes the dependencies of useEffect Hook (at line 34) change on every render. Move it inside the useEffect callback. Alternatively, wrap the definition of 'getTasksFromCurrentWorkspace' in its own useCallback() Hook  react-hooks/exhaustive-deps
+
+D:\Projects\project-management\src\components\StatsGrid.jsx
+  83:26  error  'Icon' is defined but never used  no-unused-vars
+
+D:\Projects\project-management\src\pages\Projects.jsx
+  21:11  warning  The 'filterProjects' function makes the dependencies of useEffect Hook (at line 47) change on every render. Move it inside the useEffect callback. Alternatively, wrap the definition of 'filterProjects' in its own useCallback() Hook  react-hooks/exhaustive-deps
+
+D:\Projects\project-management\src\pages\TaskDetails.jsx
+  28:11  warning  The 'fetchTaskDetails' function makes the dependencies of useEffect Hook (at line 66) change on every render. Move it inside the useEffect callback. Alternatively, wrap the definition of 'fetchTaskDetails' in its own useCallback() Hook  react-hooks/exhaustive-deps
+
+Γ£û 5 problems (1 error, 4 warnings)
+

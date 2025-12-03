@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { CheckSquareIcon, ChevronDownIcon, ChevronRightIcon } from 'lucide-react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -25,8 +25,8 @@ function MyTasksSidebar() {
                 return 'bg-gray-400 dark:bg-zinc-400';
         }
     };
-// Fetch user tasks from current workspace
-    const fetchUserTasks = () => {
+    // Fetch user tasks from current workspace
+    const fetchUserTasks = useCallback(() => {
         const userId = user?.id || '';
         if (!userId || !currentWorkspace) return;
         const currentWorkspaceTasks = currentWorkspace.projects.flatMap((project) => {
@@ -34,11 +34,11 @@ function MyTasksSidebar() {
         });
 
         setMyTasks(currentWorkspaceTasks);
-    }
+    }, [currentWorkspace, user?.id]);
 
     useEffect(() => {
         fetchUserTasks()
-    }, [currentWorkspace])
+    }, [currentWorkspace, fetchUserTasks])
 
     return (
         <div className="mt-6 px-3">

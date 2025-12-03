@@ -18,11 +18,11 @@ const CreateProjectDialog = ({ isDialogOpen, setIsDialogOpen }) => {
         progress: 0,
     });
 
-    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitting] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
     };
 
     const removeTeamMember = (email) => {

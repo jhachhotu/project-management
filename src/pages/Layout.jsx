@@ -14,7 +14,7 @@ const Layout = () => {
     // Initial load of theme
     useEffect(() => {
         dispatch(loadTheme())
-    }, [])
+    }, [dispatch])
 
     if (loading) return (
         <div className='flex items-center justify-center h-screen bg-white dark:bg-zinc-950'>
